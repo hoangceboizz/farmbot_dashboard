@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FarmBot Dashboard 🍕</title>
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <h1>FarmBot Dashboard 🤖</h1>
+
+  <div class="container">
+    <div class="card" id="btn-card">
+      <h2>Controls 🦾</h2>
+      <!-- <input type="number" id="inputX" placeholder="Nhập X">
+      <input type="number" id="inputY" placeholder="Nhập Y">
+      <br><br> -->
+      <button onclick="startMachine()">Start</button>
+      <button onclick="EndMachine()">Stop</button>
+    </div>
+
+    <div class="card" id="state-card">
+      <h2>State 😉</h2>
+      <div id="state">Not powered on yet ☠️</div>
+    </div>
+
+    <div class="card" id="garden-card" style="grid-column: 1 / 3;">
+      <h2>Garden Bot 🌳</h2>
+      <canvas id="gardenCanvas" width="850" height="550"></canvas>
+    </div>
+  </div>
+
+  <!-- ✅ Load script sau cùng khi DOM đã sẵn sàng -->
+  <!-- Không dùng CDN nữa -->
+  <script src="js/mqtt.min.js"></script>
+  <script src="js/mqtt.js"></script>
+</body>
+</html>
